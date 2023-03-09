@@ -20,7 +20,7 @@ public class conversor extends JFrame {
     double resultado;
 //Conversion de temperatura
     private double celsiusToFahrenheit(double celsius) {
-        return celsius * 1.8 + 32;
+        return celsius * 1.8 + 32  ;
     }
 
     private double celsiusToKelvin(double celsius) {
@@ -101,43 +101,62 @@ public conversor() {
 //Operaciones para la conversion de temperatura
             if (convDe.getSelectedItem().equals("Celsius") && convA.getSelectedItem().equals("Fahrenheit")) {
                 salida = Math.round(celsiusToFahrenheit(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "°F");
             } else if (convDe.getSelectedItem().equals("Celsius") && convA.getSelectedItem().equals("Kelvin")) {
                 salida = Math.round(celsiusToKelvin(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "K");
             } else if (convDe.getSelectedItem().equals("Fahrenheit") && convA.getSelectedItem().equals("Celsius")) {
                 salida = Math.round(fahrenheitToCelsius(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "°C");
             } else if (convDe.getSelectedItem().equals("Fahrenheit") && convA.getSelectedItem().equals("Kelvin")) {
                 salida = Math.round(fahrenheitToKelvin(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "K");
             } else if (convDe.getSelectedItem().equals("Kelvin") && convA.getSelectedItem().equals("Celsius")) {
                 salida = Math.round(kelvinToCelsius(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "°C");
             } else if (convDe.getSelectedItem().equals("Kelvin") && convA.getSelectedItem().equals("Fahrenheit")) {
                 salida = Math.round(kelvinToFahrenheit(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "°F");
             } else if (convDe.getSelectedItem().equals("Celsius") && convA.getSelectedItem().equals("Celsius")) {
                 salida = entrada;
+                resultados.setText("El resultado es: " + salida + "°C");
             } else if (convDe.getSelectedItem().equals("Fahrenheit") && convA.getSelectedItem().equals("Fahrenheit")) {
                 salida = entrada;
+                resultados.setText("El resultado es: " + salida + "°F");
             } else if (convDe.getSelectedItem().equals("Kelvin") && convA.getSelectedItem().equals("Kelvin")) {
                 salida = entrada;
+                resultados.setText("El resultado es: " + salida + "K");
 //Operarionces para la conversion de monedas
             } else if (convDe.getSelectedItem().equals("USA") && convA.getSelectedItem().equals("EUR")) {
                 salida = Math.round(dolarToEuro(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "€");
             } else if (convDe.getSelectedItem().equals("USA") && convA.getSelectedItem().equals("BOL")) {
                 salida = Math.round(dolarToBoliviano(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "Bs");
             } else if (convDe.getSelectedItem().equals("EUR") && convA.getSelectedItem().equals("USA")) {
                 salida = Math.round(euroToDolar(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "$");
             } else if (convDe.getSelectedItem().equals("EUR") && convA.getSelectedItem().equals("BOL")) {
                 salida = Math.round(euroToBoliviano(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "Bs");
             } else if (convDe.getSelectedItem().equals("BOL") && convA.getSelectedItem().equals("USA")) {
                 salida = Math.round(bolivianoToDolar(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "$");
             } else if (convDe.getSelectedItem().equals("BOL") && convA.getSelectedItem().equals("EUR")) {
                 salida = Math.round(bolivianoToEuro(entrada) * 100.0) / 100.0;
+                resultados.setText("El resultado es: " + salida + "€");
             } else if (convDe.getSelectedItem().equals("USA") && convA.getSelectedItem().equals("USA")) {
                 salida = entrada;
+                resultados.setText("El resultado es: " + salida + "$");
             } else if (convDe.getSelectedItem().equals("EUR") && convA.getSelectedItem().equals("EUR")) {
                 salida = entrada;
+                resultados.setText("El resultado es: " + salida + "€");
             } else if (convDe.getSelectedItem().equals("BOL") && convA.getSelectedItem().equals("BOL")) {
                 salida = entrada;
+                resultados.setText("El resultado es: " + salida + "Bs");
+
             }
-            resultados.setText("Resultado: " + salida);
+            //resultados.setText("Resultado: " + salida);
         }
     });
 
